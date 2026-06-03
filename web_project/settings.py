@@ -129,8 +129,8 @@ DATABASES = {
         'PORT': '1433'
     }, # Default SQL Server port
    'OPTIONS': {
-            'driver': 'ODBC Driver 18 for SQL Server',
-            'TrustServerCertificate': 'yes',  # <-- ADD THIS LINE
+            'driver': 'ODBC Driver 17 for SQL Server',
+            #'TrustServerCertificate': 'yes'  # <-- ADD THIS LINE
    },
 }
 
