@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python manage.py runserver
 
 # 8. TIC TAC TOE -> Train Model
-https://6rtfk8-8000.csb.app/train_tictactoe_model
+https://v3zz8t-8000.csb.app/train_tictactoe_model
 {"status": "success", "message": "Model trained and saved!", "epochs": 10, "dataset_size": 22882, "save_path": "models/tictactoe_tf_model"}
 
 # 9. TIC TAC TOE -> Download Model (alternative #1)

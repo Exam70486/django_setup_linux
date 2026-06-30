@@ -120,30 +120,30 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DATABASES = {
-  'default': {
+    'default': {
         'ENGINE': 'mssql',
         'NAME': 'webapiangulardemo',
         'USER': 'aperezNWO_SQLLogin_1',
         'PASSWORD': 'aperezNWO_SQLLogin_1',
         'HOST': 'webapiangulardemo.mssql.somee.com',
         'PORT': '1433'
-    }, # Default SQL Server port
-   'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-            #'TrustServerCertificate': 'yes'  # <-- ADD THIS LINE
-   },
+    },  # Default SQL Server port
+    'OPTIONS': {
+        'driver': 'ODBC Driver 17 for SQL Server',
+        # 'TrustServerCertificate': 'yes'  # <-- ADD THIS LINE
+    },
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "https://apereznwo.github.io",  # Replace with your frontend origin
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_METHODS = [
     "GET",
     "POST",
     "PUT",
     "DELETE",
 ]
+
 CORS_ALLOW_HEADERS = [
     "Content-Type",
-    "Authorization",  # Add any necessary headers
+    "Authorization"
 ]
