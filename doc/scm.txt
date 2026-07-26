@@ -60,7 +60,7 @@ curl -X POST https://6rtfk8-8000.csb.app/predict/ \
      -H "Content-Type: application/json" \
      -d '{"mission_number": 18.0}'
 
-curl -X POST https://literate-space-parakeet-gr6qvx47p7v3vwq-8000.app.github.dev/predict/ \
+curl -X POST https://laughing-funicular-wjrr7w754g39ggv-8000.app.github.dev/predict/ \
      -H "Content-Type: application/json" \
      -d '{"mission_number": 18.0}'
 
