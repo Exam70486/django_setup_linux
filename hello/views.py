@@ -1,3 +1,4 @@
+
 from django.http import FileResponse, JsonResponse,  HttpResponse
 from django.shortcuts import render
 from django.db import connection
@@ -11,6 +12,7 @@ from rest_framework import serializers
 from rest_framework import status
 from tensorflow.keras import layers, models
 from typing import Tuple, Dict
+import sys
 import json
 import zipfile
 import shutil
@@ -31,11 +33,21 @@ logger = logging.getLogger(__name__)
 #############################################
 # BEGIN GENERAL FUNCIONALITY
 #############################################
+
+def home(request):
+    return HttpResponse("Hello, Django!")
+
 @api_view(['GET'])
 def health_check(request):
     return Response({'status': 'ok'})
-def home(request):
-    return HttpResponse("Hello, Django!")
+
+def getPythonVersion(request):
+    current_version = sys.version
+    return HttpResponse(f"{current_version}")
+
+@api_view(['GET'])
+def ping(request):
+    return Response(status=204)
 #############################################
 # END GENERAL FUNCIONALITY
 #############################################
