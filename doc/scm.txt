@@ -74,6 +74,8 @@ curl -X POST https://laughing-funicular-wjrr7w754g39ggv-8000.app.github.dev/pred
 --------------------------
 --------------------------
 
+# INSTALL DOCKER EXTENSION FOR VISUAL STUDIO
+
 -------------------------------------------------------
 # TO SAVE DISK SPACE
 -------------------------------------------------------
