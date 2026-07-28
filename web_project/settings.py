@@ -39,7 +39,7 @@ SECRET_KEY = 'django-insecure-v84z6@^x*2c^)*(57w*q8vi!0vl9oj$cje^9e5uvsa-wk2)d*o
 DEBUG = True
 
 ALLOWED_HOSTS = ['6rtfk8-8000.csb.app', 'localhost', 'http://localhost:4200',
-                 '127.0.0.1', 'https://apereznwo.github.io/','django-setup-linux.onrender.com','django-setup-linux-latest.onrender.com/']
+                 '127.0.0.1', 'https://apereznwo.github.io/','django-setup-linux.onrender.com','django-setup-linux-latest.onrender.com']
 
 
 # Application definition
