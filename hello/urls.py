@@ -4,6 +4,7 @@ from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularSwaggerView,
     SpectacularRedocView
+)
 
 urlpatterns = [
     path("", views.home, name="home"),
