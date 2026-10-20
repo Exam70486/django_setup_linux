@@ -43,7 +43,7 @@ def health_check(request):
     return Response({'status': 'ok'})
 
 @api_view(['GET'])
-def getPythonAppVersion(request):
+def getAppVersion(request):
     current_version = '1.0.1'
     return HttpResponse(f"{current_version}")
 
