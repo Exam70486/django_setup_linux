@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 #############################################
 # BEGIN GENERAL FUNCIONALITY
 #############################################
-
+@api_view(['GET'])
 def home(request):
     return HttpResponse("Hello, Django!")
 
@@ -42,10 +42,17 @@ def home(request):
 def health_check(request):
     return Response({'status': 'ok'})
 
+@api_view(['GET'])
+def getPythonAppVersion(request):
+    current_version = '1.0.1'
+    return HttpResponse(f"{current_version}")
+
+@api_view(['GET'])
 def getPythonVersion(request):
     current_version = sys.version
     return HttpResponse(f"{current_version}")
 
+@api_view(['GET'])
 def getPythonWebServerVersion(request):
     current_version = django.get_version()
     return HttpResponse(f"{current_version}")

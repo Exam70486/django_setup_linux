@@ -7,9 +7,9 @@ from drf_spectacular.views import (
 )
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path('getAllLogs', views.getAllLogs, name='getAllLogs'),
-    path('getAllPersons', views.getAllPersons, name='getAllPersons'),
+    path("", views.home                                , name="home"),
+    path('getAllLogs', views.getAllLogs                , name='getAllLogs'),
+    path('getAllPersons', views.getAllPersons          , name='getAllPersons'),
     path('getAllContactForms', views.getAllContactForms, name='getAllContactForms'),
     path('train_tictactoe_model', views.train_tictactoe_model,
          name='train_tictactoe_model'),
@@ -17,10 +17,11 @@ urlpatterns = [
          name='download_tictactoe_model'),
     path('predict/'                    , views.predict_apollo_time,        name='predict_apollo_time'),
     path('health/'                     , views.health_check,               name='health_check'),  # Optional
+    path('getAppVersion'               , views.getAppVersion,              name='getAppVersion'),
     path('getPythonVersion'            , views.getPythonVersion,           name='getPythonWebServerVersion'),
     path('getPythonWebServerVersion'   , views.getPythonWebServerVersion,  name='getPythonVersion'),
     path('ping'                        , views.ping,                       name='ping'),
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/schema/', SpectacularAPIView.as_view()                     , name='schema'),
     path('api/docs/'  , SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    path('api/redoc/' , SpectacularRedocView.as_view(url_name='schema'), name='redoc')               
+    path('api/redoc/' , SpectacularRedocView.as_view(url_name='schema')  , name='redoc')               
 ]

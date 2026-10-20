@@ -103,26 +103,28 @@ df -h . && du -h --max-depth=1 | sort -hr
 
 
 ## BUILD FROM GITHUB CODESPACES  --> "Owned by 'aperezNWO'"
-0) https://github.com/codespaces
+   https://github.com/codespaces
 
-# docker must be installed on desktop. it was from codespaces, only visual studio code extensions was installed
-# dot included !!!!
-# (time consumming)
-
+## docker must be installed on desktop. it was from codespaces, only visual studio code extensions was installed
+     ## dot included !!!! (time consumming)
      docker buildx build -t django_setup_linux .
 
-# create a tag previous to publish
+## create a tag previous to publish
      docker tag django_setup_linux:latest apereznwogmail/django_setup_linux:latest
 
-# list images built
+## list images built
      docker image ls 
 
 ## log into docker for publish
+     ## OPTION 1 - GITHUB CODESPACES
      ## get PAT from https://app.docker.com/accounts/apereznwogmail/settings/personal-access-tokens
      ## privileges : read/write/delete
-     ## must return 'Login Succeeded'
           echo "YOUR_PAT_HERE" | docker login --username apereznwogmail --password-stdin
-
+     ## OPTION 2 - DOCKER desktop
+          docker login
+     
+     ## must return 'Login Succeeded' both cases
+  
 ## publish in docker hub
      ## publish is time consuming
      ## https://hub.docker.com/
@@ -169,7 +171,7 @@ df -h . && du -h --max-depth=1 | sort -hr
      ##  save changes on git.
 
      git add * 
-     git commit -m"getPythonWebServerVersion"
+     git commit -m"[APPLICAITON DJANGO_SETUP_LINUX] -v[1.0.1]" -m"1) health() endpoint"
      git remote set-url origin https://aperezNWOGmail:<YOUR_PAT_HERE>@github.com/aperezNWOGmailerezNWO/django_setup_windows.git
      git push --set-upstream origin main
 
