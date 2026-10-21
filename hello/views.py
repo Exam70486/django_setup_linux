@@ -23,6 +23,7 @@ import numpy as np
 import tensorflow as tf
 import json
 import os
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress warnings
 
 from machine_learning_app.model_predictor import predict_time
@@ -60,6 +61,34 @@ def getPythonWebServerVersion(request):
 @api_view(['GET'])
 def ping(request):
     return Response(status=204)
+
+@api_view(['GET'])
+def health(request):
+    # Import inside function or from app config to prevent circular imports
+    from myproject.urls import ENDPOINTS
+
+    # Sanitize dictionary for JSON serialization (remove callable view objects)
+    endpoints_summary = {
+        key: {
+            "name": val["name"],
+            "path": val["path"],
+            "description": val["description"]
+        }
+        for key, val in ENDPOINTS.items()
+    }
+
+    payload = {
+        "server": {
+            "name": getattr(settings, "SERVER_NAME", "Django Web Server"),
+            "version": getattr(settings, "APP_VERSION", "1.0.0"),
+            "python_version": sys.version.split()[0],
+            "status": "working"
+        },
+        "endpoints": endpoints_summary
+    }
+
+    return Response(payload)
+
 #############################################
 # END GENERAL FUNCIONALITY
 #############################################
