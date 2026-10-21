@@ -51,7 +51,7 @@ ENDPOINTS = {
         "view": views.predict_apollo_time,
     },
     "health": {
-        "name": "health",
+        "name": "health/",
         "path": "health/",
         "description": "System health status and endpoint discovery",
         "view": views.health,

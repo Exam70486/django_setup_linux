@@ -65,7 +65,7 @@ def ping(request):
 @api_view(['GET'])
 def health(request):
     # Import inside function or from app config to prevent circular imports
-    from myproject.urls import ENDPOINTS
+    from hello.urls import ENDPOINTS
 
     # Sanitize dictionary for JSON serialization (remove callable view objects)
     endpoints_summary = {
