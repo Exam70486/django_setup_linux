@@ -51,6 +51,7 @@ ALLOWED_HOSTS = [
                     , 'django-setup-linux-latest-kr0p.onrender.com'
                     , 'django-setup-linux-latest-fup4.onrender.com'
                     , 'django-setup-linux-latest-cxgj.onrender.com'
+                    , 'django-setup-linux-latest-t9by.onrender.com'
                 ]
 
 # Application definition

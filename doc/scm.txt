@@ -154,7 +154,7 @@ df -h . && du -h --max-depth=1 | sort -hr
 
 ## PATH 1 - NO EXTERNAL AUTH REQUIRED
      git add *
-     git commit -m"[APPLICAITON DJANGO_SETUP_LINUX] -v[1.0.1]" -m"1) health() endpoint"
+     git commit -m"[APPLICAITON DJANGO_SETUP_LINUX] -v[1.0.2]" -m"1) render config update"
      git push 
      git pull
 
