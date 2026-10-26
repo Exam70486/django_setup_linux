@@ -172,7 +172,7 @@ df -h . && du -h --max-depth=1 | sort -hr
      ##  save changes on git.
 
      git add * 
-     git commit -m"[APPLICAITON DJANGO_SETUP_LINUX] -v[1.0.1]" -m"1) health() endpoint"
+     git commit -m"[APPLICAITON DJANGO_SETUP_LINUX] -v[1.0.2]" -m"1) render config update"
      git remote set-url origin https://aperezNWOGmail:<YOUR_PAT_HERE>@github.com/aperezNWOGmailerezNWO/django_setup_windows.git
      git push --set-upstream origin main
 
